@@ -10,11 +10,10 @@
         <th>On Sale</th>
         <th>Stock Level</th>
     </tr>
-
-    @foreach (var product in @Model)
+    @foreach (var product in Model)
     {
         <tr>
-            <td>@product.ProductId</td>
+            <td><a href="/Product/ViewProduct/@product.ProductId">@product.ProductId</a></td>
             <td>@product.Name</td>
             <td>@product.Price</td>
             <td>@product.CategoryID</td>
@@ -22,5 +21,4 @@
             <td>@product.StockLevel</td>
         </tr>
     }
-
 </table>
